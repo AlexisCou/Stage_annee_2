@@ -1,43 +1,81 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>RIPSYDEVE - Accueil</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="Réseau Interuniversitaire de Psychologie du Développement et de l’Éducation">
 </head>
 
 <body>
 <header class="site-header">
-  <div class="header-container">
+  <div class="header-container container">
 
     <div class="header-left">
       <div class="logo-area">
-        <img src="logo-ripsydeve.png" alt="RIPSYDEVE" class="site-logo">
-        <span class="site-title">RIPSYDEVE</span>
+        <a href="index.html" class="logo-link">
+          <img src="img/logo_ripsydeve2.png" alt="Retour Accueil" class="site-logo">
+          <span class="site-title">RIPSYDEVE</span>
+        </a>
       </div>
 
       <nav class="main-navigation">
         <ul>
-          <li><a href="html/a-propos.html">À propos</a></li>
-          <li><a href="#">Nos Actions</a></li>
-          <li><a href="#">Actualités</a></li>
-          <li><a href="#">Adhérer</a></li>
+          <li class="dropdown">
+            <a href="html/a-propos.html">À propos</a>
+            <ul class="submenu">
+              <li><a href="html/historique.html">Historique</a></li>
+              <li><a href="html/bureau.html">Bureau / Gouvernance</a></li>
+              <li><a href="html/statuts.html">Statuts</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Colloques</a>
+            <ul class="submenu">
+              <li><a href="#">Édition actuelle</a></li>
+              <li><a href="#">Archives</a></li>
+              <li><a href="#">Modalités de soumission</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Nos Actions</a>
+            <ul class="submenu">
+              <li><a href="#">Publications</a> </li>
+              <li><a href="#">Soutien aux doctorants</a> </li>
+              <li><a href="#">Groupes de travail</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Actualités</a>
+            <ul class="submenu">
+              <li><a href="#">Veille scientifique</a> </li>
+              <li><a href="#">Appels à projets</a> </li>
+              <li><a href="#">Vie du réseau</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Réseau</a>
+            <ul class="submenu">
+              <li><a href="#">Annuaire des labos partenaires</a> </li>
+              <li><a href="#">Liens utiles</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Adhérer</a>
+            <ul class="submenu">
+              <li><a href="#">Formulaire</a> </li>
+              <li><a href="#">Tarifs</a> </li>
+              <li><a href="#">Avantages membres</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Contact</a>
+            <ul class="submenu">
+              <li><a href="#">Page de contact</a> </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -57,7 +95,6 @@
 
 <main class="home-content">
   <div class="container content-grid">
-
     <article class="intro-text">
       <h2>C'est quoi le RIPSYDEVE ?</h2>
       <p>Le <strong>RIPSYDEVE</strong> est le Réseau Interuniversitaire de Psychologie du Développement et de l’Éducation.</p>
@@ -66,15 +103,38 @@
 
     <aside class="intro-media">
       <div class="media-card">
-        <p class="media-label">Flyer</p>
-        <img src="flyer-thumb.jpg" alt="Aperçu du flyer">
+        <img src="img/autre_logo.png" alt="Information RIPSYDEVE">
       </div>
     </aside>
-
   </div>
 </main>
 
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-column">
+      <h3>À PROPOS</h3>
+      <p>Site web vitrine du RIPSYDEVE, le Réseau Interuniversitaire de Psychologie du Développement et de l'Éducation.</p>
+    </div>
+    <div class="footer-column">
+      <h3>SUJETS</h3>
+      <ul>
+        <li>Non classé</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUIVEZ-NOUS</h3>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Designed with WordPress</p>
+  </div>
+</footer>
+
 <script src="js/app.js"></script>
 </body>
-
 </html>
