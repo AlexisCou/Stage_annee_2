@@ -77,7 +77,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 /* HERO BANNER */
 .hero-banner {
-  background: var(--dark-blue) url('../img/brain-bg.jpg') center/cover no-repeat;
+  background: var(--dark-blue) url('../img/exemple.png') center/cover no-repeat;
   height: 350px;
   display: flex; align-items: center; justify-content: center;
   color: white; text-align: center;
