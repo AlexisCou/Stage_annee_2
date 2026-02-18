@@ -1,27 +1,37 @@
-/**
- * Fonction pour charger un composant HTML (Header/Footer) dans un placeholder
- * @param {string} id - L'ID de la balise div où injecter le code
- * @param {string} file - Le chemin vers le fichier fragment
- */
 function loadComponent(id, file) {
-  fetch(file)
+  const isSubDir = window.location.pathname.includes('/html/');
+  const finalPath = isSubDir ? '../' + file : file;
+
+  fetch(finalPath)
     .then(response => {
-      if (!response.ok) {
-        throw new Error("Erreur réseau : impossible de charger " + file);
-      }
+      if (!response.ok) throw new Error("Erreur de chargement : " + finalPath);
       return response.text();
     })
     .then(data => {
-      document.getElementById(id).innerHTML = data;
+      const placeholder = document.getElementById(id);
+      placeholder.innerHTML = data;
+
+      if (isSubDir && id === 'header-placeholder') {
+        const elements = placeholder.querySelectorAll('a, img');
+        elements.forEach(el => {
+          const attr = el.tagName === 'IMG' ? 'src' : 'href';
+          let val = el.getAttribute(attr);
+
+          if (val && !val.startsWith('http') && !val.startsWith('#')) {
+            if (val.startsWith('html/')) {
+              el.setAttribute(attr, val.replace('html/', ''));
+            }
+            else if (val === 'index.html' || val.startsWith('img/')) {
+              el.setAttribute(attr, '../' + val);
+            }
+          }
+        });
+      }
     })
-    .catch(error => {
-      console.error("Erreur lors du chargement du composant :", error);
-    });
+    .catch(error => console.error("Erreur Fatale :", error));
 }
 
-// On attend que la page soit prête avant de charger les composants
 document.addEventListener("DOMContentLoaded", () => {
-  // Note : On utilise des chemins relatifs à la racine
-  loadComponent('header-placeholder', '/header-fragment.html');
-  loadComponent('footer-placeholder', '/footer-fragment.html');
+  loadComponent('header-placeholder', 'header-fragment.html');
+  loadComponent('footer-placeholder', 'footer-fragment.html');
 });
