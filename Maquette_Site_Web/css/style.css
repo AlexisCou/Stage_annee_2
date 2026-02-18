@@ -1,247 +1,145 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
-   Base styles: opinionated defaults
+   RESET & BASE STYLES
    ========================================================================== */
+* { box-sizing: border-box; } /* Indispensable pour la gestion des tailles */
 
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: Arial, sans-serif;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
+body { margin: 0; padding: 0; }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+img { vertical-align: middle; max-width: 100%; height: auto; }
+
+/* ==========================================================================
+   AUTHOR'S CUSTOM STYLES - RIPSYDEVE
+   ========================================================================== */
+
+:root {
+  --primary-blue: #0088cc;
+  --text-main: #222;
+  --max-width: 1100px;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+/* Container : Règle ton problème de texte collé aux bords */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+/* HEADER STRUCTURE (Flexible) */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+.site-logo { height: 50px; }
+.site-title { font-weight: bold; font-size: 1.2em; }
 
-textarea {
-  resize: vertical;
+/* NAVIGATION */
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0; padding: 0;
+  gap: 15px;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.95em;
+}
+
+.main-navigation a:hover { color: var(--primary-blue); }
+
+/* BOUTON CONNEXION (Fix responsive) */
+.btn-connexion {
+  background-color: var(--primary-blue);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap; /* Empêche la coupure du mot */
+  font-weight: bold;
+}
+
+/* BANNIÈRE HERO */
+.hero-banner {
+  background: #002244 url('../img/brain-bg.jpg') center/cover no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 800px;
+  font-size: 1.6em;
+}
+
+/* GRILLE DE CONTENU (66% / 33%) */
+.content-grid {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.text-column { flex: 2; } /* Colonne texte large */
+.sidebar-column { flex: 1; } /* Colonne membres étroite */
+
+.member-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.member-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 /* ==========================================================================
-   Author's custom styles
+   RESPONSIVE (Mobile)
    ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .header-container, .content-grid, .header-left {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+  .main-navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+  }
 
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+  .text-column, .sidebar-column { width: 100%; }
 }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
