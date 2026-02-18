@@ -144,6 +144,122 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #555;
 }
 
+/* Centrage du contenu pour la lecture */
+.single-column {
+  max-width: 850px;
+  margin: 40px auto;
+}
+
+/* Zone des liens en bas de page */
+.cta-area {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f4f7f9;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #d1d9e6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #003366;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #003366;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #003366;
+  color: white;
+}
+
+/* Style de la Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  padding-left: 30px;
+  border-left: 4px solid #003366; /* Bleu de ton header */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Le petit point sur la ligne */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #d4a017; /* Doré pour l'accentuation */
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px 0;
+  color: #003366;
+}
+
+/* Style pour la page Statuts */
+.statuts-container {
+  margin-top: 30px;
+}
+
+.statuts-article {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.statuts-article h3 {
+  color: #003366;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.download-box {
+  margin-top: 40px;
+  background-color: #f0f4f8;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid #d4a017; /* Rappel du doré */
+}
+
+.download-box p {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
