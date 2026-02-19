@@ -464,6 +464,48 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding: 8px 0;
 }
 
+/* Style pour la page Nos Actions */
+.action-block {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.action-block:last-child {
+  border-bottom: none;
+}
+
+.action-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.action-icon {
+  font-size: 1.8rem;
+}
+
+.action-header h2 {
+  margin: 0;
+  color: #003366; /* Bleu institutionnel */
+  font-size: 1.6rem;
+}
+
+.action-content {
+  padding-left: 45px; /* Aligné sous le titre, pas sous l'icône */
+}
+
+.simple-list {
+  margin: 15px 0;
+  list-style-type: square;
+  color: #555;
+}
+
+.simple-list li {
+  margin-bottom: 8px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
