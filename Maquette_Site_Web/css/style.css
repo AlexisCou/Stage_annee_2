@@ -373,6 +373,53 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   background: #fff;
 }
 
+/* Style pour la page Modalités */
+.formats-container {
+  margin: 40px 0;
+}
+
+.format-box {
+  background: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.format-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.format-type {
+  background: #003366;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.format-box h3 {
+  margin: 0;
+  color: #003366;
+}
+
+.format-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ccc;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.format-details li {
+  margin-bottom: 5px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
