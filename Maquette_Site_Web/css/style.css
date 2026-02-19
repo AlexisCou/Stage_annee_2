@@ -602,6 +602,63 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 0.95rem;
 }
 
+/* Style pour la page Groupes de Travail */
+.gt-container {
+  margin-top: 30px;
+}
+
+.gt-card {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.gt-card:hover {
+  box-shadow: 0 4px 15px rgba(0,33,102,0.1); /* Ombre légère bleutée */
+}
+
+.gt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.gt-header h2 {
+  margin: 0;
+  color: #003366; /* Bleu institutionnel */
+  font-size: 1.4rem;
+}
+
+.gt-status {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.gt-status.active {
+  background-color: #e6fffa;
+  color: #2c7a7b; /* Vert pour ce qui est actif */
+}
+
+.gt-status.archive {
+  background-color: #f7fafc;
+  color: #4a5568; /* Gris pour ce qui est fini */
+}
+
+.gt-meta {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
