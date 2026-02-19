@@ -312,6 +312,67 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   }
 }
 
+/* Header de l'événement */
+.event-header {
+  background: linear-gradient(135deg, #003366 0%, #00509d 100%);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.event-badge {
+  display: inline-block;
+  background: #d4a017;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.event-theme {
+  font-size: 1.4rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.event-meta {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+}
+
+/* Tableau des dates */
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.dates-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Cartes latérales */
+.sidebar-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.sidebar-card.highlight {
+  border: 2px solid #d4a017;
+  background: #fff;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
