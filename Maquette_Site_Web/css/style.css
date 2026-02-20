@@ -991,6 +991,30 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   text-decoration: underline;
 }
 
+.contact-roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.role-card {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 8px;
+  border-top: 4px solid #003366;
+}
+
+.role-card h3 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .contact-roles-grid { grid-template-columns: 1fr; }
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
