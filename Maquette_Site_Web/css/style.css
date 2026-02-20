@@ -774,6 +774,69 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding-left: 20px;
 }
 
+/* Style pour la page Actualités */
+.news-timeline {
+  margin-top: 40px;
+}
+
+.news-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.news-date {
+  min-width: 80px;
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.news-date .day { font-size: 1.5rem; font-weight: bold; display: block; }
+.news-date .month { font-size: 0.9rem; text-transform: uppercase; display: block; }
+.news-date .year { font-size: 0.8rem; opacity: 0.8; }
+
+.news-body h2 {
+  margin: 5px 0 10px 0;
+  font-size: 1.4rem;
+  color: #003366;
+}
+
+.news-category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d4a017; /* Doré */
+  letter-spacing: 1px;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-link:hover { text-decoration: underline; }
+
+/* Pagination simple */
+.pagination { margin-top: 30px; text-align: center; }
+.pagination a {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #003366;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+.pagination a.active { background: #003366; color: white; border-color: #003366; }
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
