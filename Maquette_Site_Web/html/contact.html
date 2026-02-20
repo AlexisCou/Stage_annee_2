@@ -2,17 +2,65 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact - RIPSYDEVE</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 <div id="header-placeholder"></div>
 
 <main class="container">
+  <h1>Contactez-nous</h1>
+  <p class="intro-text">Une question sur le réseau, le prochain colloque ou votre adhésion ? Notre équipe vous répondra dans les meilleurs délais.</p>
+
+  <div class="content-grid">
+    <section class="text-column">
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom / Prénom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet</label>
+          <select id="subject" name="subject">
+            <option value="colloque">Question sur le colloque</option>
+            <option value="adhesion">Problème d'adhésion</option>
+            <option value="autre">Autre demande</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+        </div>
+        <button type="submit" class="btn-connexion">Envoyer le message</button>
+      </form>
+    </section>
+
+    <aside class="sidebar-column">
+      <div class="info-card">
+        <h3>Secrétariat du RIPSYDEVE</h3>
+        <p><strong>Responsable :</strong> Amelie Courtinat-Camps</p>
+        <p><strong>Lieu :</strong> Université de Lorraine<br>Laboratoire Interpsy</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Suivez-nous</h3>
+        <p>Restez informé de nos actualités sur les réseaux sociaux.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">LinkedIn</a> |
+          <a href="#" class="social-icon">X (Twitter)</a>
+        </div>
+      </div>
+    </aside>
+  </div>
 </main>
 
 <div id="footer-placeholder"></div>
-
 <script src="../js/app.js"></script>
 </body>
 </html>

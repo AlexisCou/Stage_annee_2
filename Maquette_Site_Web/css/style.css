@@ -944,6 +944,53 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 1.5rem;
 }
 
+/* Style pour la page Contact */
+.contact-form {
+  background: #fdfdfd;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #003366;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.info-card {
+  background: #003366;
+  color: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  color: #d4a017; /* Doré */
+  margin-top: 0;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: underline;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
