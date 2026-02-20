@@ -864,6 +864,47 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #003366;
 }
 
+/* Style spécifique pour Appels à Projets */
+.news-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-badge.open {
+  background-color: #e6fffa;
+  color: #2c7a7b;
+}
+
+.status-badge.urgent {
+  background-color: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.news-item-urgent {
+  background: #fffafa; /* Fond très légèrement rosé */
+  border-left: 4px solid #c53030; /* Rouge pour l'urgence */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.deadline {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 10px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
