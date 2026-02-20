@@ -905,6 +905,45 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-top: 10px;
 }
 
+/* Style pour Vie du Réseau */
+.network-life {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #f0f0f0; /* Petite ligne verticale de timeline */
+  margin-top: 40px;
+}
+
+.life-post {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.life-post::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #d4a017; /* Point doré sur la ligne */
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.post-content h2 {
+  color: #003366;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
