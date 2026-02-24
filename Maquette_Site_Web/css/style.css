@@ -1015,6 +1015,89 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   .contact-roles-grid { grid-template-columns: 1fr; }
 }
 
+/* Style pour la page Adhérer */
+.benefits-list {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.pricing-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.price-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.price-card.highlight {
+  border: 2px solid #d4a017; /* Bordure dorée pour la catégorie principale */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Bleu institutionnel */
+  margin: 15px 0;
+}
+
+.payment-notice {
+  margin-top: 40px;
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 5px solid #d4a017;
+}
+
+.benefit-card {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #d4a017; /* Doré */
+}
+
+.pricing-display {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.price-item {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+  background: #003366; /* Bleu */
+  color: white;
+  border-radius: 10px;
+}
+
+.step-box {
+  margin: 20px 0;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
