@@ -1098,6 +1098,21 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   border-radius: 8px;
 }
 
+.btn-connexion {
+  background-color: #d4a017; /* Ton doré */
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-connexion:hover {
+  background-color: #003366; /* Ton bleu au survol */
+  color: white !important;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
