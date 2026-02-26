@@ -1298,6 +1298,27 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-top: 40px;
 }
 
+.news-item-private {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #d4a017; /* Rappel du badge membre */
+}
+
+.news-meta {
+  font-size: 0.8rem;
+  color: #d4a017;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-item-private h3 {
+  margin-bottom: 15px;
+  color: #002244;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
