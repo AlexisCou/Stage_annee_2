@@ -1319,6 +1319,44 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #002244;
 }
 
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.profile-form input {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  color: #666;
+}
+
+.status-box {
+  background: #eef9f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #27ae60;
+}
+
+.small-info {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.btn-secondary-outline {
+  background: none;
+  border: 1px solid #002244;
+  color: #002244;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
