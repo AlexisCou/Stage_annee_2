@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Centre de ressources - RIPSYDEVE</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="member-body">
+
+<header class="member-header-nav">
+  <div class="container nav-flex">
+    <div class="logo-area">
+      <a href="../index.html"><img src="../img/logo_ripsydeve2.png" alt="Logo" class="mini-logo"></a>
+      <span class="member-tag">Espace Connecté</span>
+    </div>
+    <nav class="member-nav">
+      <ul>
+        <li><a href="espace_membre.html">Tableau de bord</a></li>
+        <li><a href="ressources.html" class="active">Centre de ressources</a></li>
+        <li><a href="actualites_membres.html">Actualités internes</a></li>
+        <li><a href="profil.html">Mon Profil</a></li>
+        <li><a href="../index.html" class="logout-btn">Déconnexion</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="resource-header">
+    <h1>Centre de ressources</h1>
+    <button class="btn-small-gold" id="open-upload">+ Déposer un document</button>
+  </div>
+
+  <section class="tool-card">
+    <div class="filter-bar">
+      <input type="text" placeholder="Rechercher un document...">
+      <select>
+        <option>Tous les formats</option>
+        <option>PDF</option>
+        <option>DOCX</option>
+      </select>
+    </div>
+
+    <table class="doc-table">
+      <thead>
+      <tr>
+        <th>Nom du document</th>
+        <th>Type</th>
+        <th>Date de publication</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Compte-rendu AG Nancy 2025</td>
+        <td>PDF</td>
+        <td>12/02/2026</td>
+        <td><a href="#" class="btn-text">Télécharger</a></td>
+      </tr>
+      <tr>
+        <td>Protocole recherche inclusion scolaire</td>
+        <td>DOCX</td>
+        <td>05/01/2026</td>
+        <td><a href="#" class="btn-text">Télécharger</a></td>
+      </tr>
+      <tr>
+        <td>Annuaire thématique des laboratoires</td>
+        <td>PDF</td>
+        <td>20/12/2025</td>
+        <td><a href="#" class="btn-text">Télécharger</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<div id="upload-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Nouveau dépôt</h3>
+    <form class="upload-form">
+      <input type="text" placeholder="Nom du fichier" required>
+      <input type="file" required>
+      <button type="button" class="btn-connexion" onclick="alert('Fichier envoyé !')">Valider le dépôt</button>
+    </form>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
