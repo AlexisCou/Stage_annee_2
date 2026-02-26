@@ -35,3 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent('header-placeholder', 'header-fragment.html');
   loadComponent('footer-placeholder', 'footer-fragment.html');
 });
+
+const modal = document.getElementById("upload-modal");
+const btn = document.querySelector(".btn-small-gold");
+const span = document.getElementsByClassName("close")[0];
+
+if(btn) {
+  btn.onclick = () => modal.style.display = "block";
+}
+if(span) {
+  span.onclick = () => modal.style.display = "none";
+}
+window.onclick = (event) => {
+  if (event.target == modal) modal.style.display = "none";
+}
