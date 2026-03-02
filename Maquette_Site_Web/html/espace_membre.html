@@ -18,8 +18,8 @@
     <nav class="member-nav">
       <ul>
         <li><a href="espace_membre.html" class="active">Tableau de bord</a></li>
-        <li><a href="ressources.html">Centre de ressources</a></li>
-        <li><a href="actualites_membres.html">Actualités internes</a></li>
+        <li><a href="ressources.html">Bibliothèque Doc</a></li>
+        <li><a href="actualites_membres.html">REPSYBRÈVE Interne</a></li>
         <li><a href="profil.html">Mon Profil</a></li>
         <li><a href="../index.html" class="logout-btn">Déconnexion</a></li>
       </ul>
@@ -30,42 +30,46 @@
 <main class="container">
   <section class="welcome-section">
     <h1>Tableau de bord membre</h1>
-    <p>Bienvenue dans votre espace de travail collaboratif. Retrouvez ici vos documents et informations de cotisation.</p>
+    <p>Bienvenue dans votre espace de travail collaboratif. Retrouvez ici les ressources partagées du réseau et vos informations de cotisation.</p>
   </section>
 
   <div class="dashboard-grid">
     <section id="ressources" class="tool-card">
       <div class="card-header">
-        <h3>📂 Centre de ressources</h3>
-        <button class="btn-small-gold">Déposer un document</button>
+        <h3>📂 Bibliothèque de ressources</h3>
       </div>
+
+      <div class="folder-header-info">
+        <p class="small">Sélectionnez un document pour le consulter ou le télécharger.</p>
+      </div>
+
       <table class="doc-table">
         <thead>
         <tr>
           <th>Nom du document</th>
-          <th>Format</th>
-          <th>Date</th>
+          <th>Type</th>
+          <th>Dernière mise à jour</th>
           <th>Action</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>Compte-rendu AG Nancy 2025</td>
-          <td>PDF</td>
+          <td><strong>📁 Dossier : Comptes-rendus AG</strong></td>
+          <td>Dossier</td>
           <td>12/02/2026</td>
-          <td><a href="#">Télécharger</a></td>
+          <td><a href="#" class="btn-text-gold">Ouvrir</a></td>
         </tr>
         <tr>
           <td>Protocole recherche inclusion scolaire</td>
           <td>DOCX</td>
           <td>05/01/2026</td>
-          <td><a href="#">Télécharger</a></td>
+          <td><a href="#" class="btn-text-gold">Télécharger</a></td>
         </tr>
         <tr>
-          <td>Annuaire thématique des labos</td>
+          <td>Annuaire thématique des labos 2026</td>
           <td>PDF</td>
           <td>20/12/2025</td>
-          <td><a href="#">Télécharger</a></td>
+          <td><a href="#" class="btn-text-gold">Télécharger</a></td>
         </tr>
         </tbody>
       </table>
@@ -91,23 +95,6 @@
     <p>&copy; 2026 RIPSYDEVE - Espace sécurisé</p>
   </div>
 </footer>
-
-<div id="upload-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Déposer un nouveau document</h3>
-    <form class="upload-form">
-      <input type="text" placeholder="Titre du document" required>
-      <select>
-        <option>Sélectionner un type</option>
-        <option>PDF</option>
-        <option>DOCX</option>
-      </select>
-      <input type="file" id="file-input">
-      <button type="button" class="btn-connexion" onclick="alert('Document envoyé au secrétariat !')">Envoyer</button>
-    </form>
-  </div>
-</div>
 
 </body>
 </html>
