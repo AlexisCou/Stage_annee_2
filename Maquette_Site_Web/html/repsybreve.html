@@ -7,67 +7,78 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="member-body"> <div id="header-placeholder"></div>
+<body class="member-body">
 
 <nav class="member-header-nav">
   <div class="container nav-flex">
+    <div class="logo-area">
+      <img src="../img/logo_ripsydeve2.png" alt="Logo" class="mini-logo">
+      <span class="member-tag">Espace Connecté</span>
+    </div>
     <div class="member-nav">
       <ul>
         <li><a href="espace_membre.html">Tableau de bord</a></li>
         <li><a href="ressources.html">Bibliothèque</a></li>
-        <li><a href="repsybreve.html" class="active">REPSYBRÈVE</a></li>
+        <li><a href="repsybreve.html" class="active">Repsybrève</a></li>
         <li><a href="profil.html">Mon Profil</a></li>
+        <li><a href="../index.html" class="logout-btn">Déconnexion</a></li>
       </ul>
     </div>
-    <a href="connexion.html" class="logout-btn">Déconnexion</a>
   </div>
 </nav>
 
 <main class="container">
   <header class="card-header" style="margin-top: 30px;">
     <h2>Flux de la REPSYBRÈVE</h2>
-    <span class="member-tag">Contenu Exclusif</span>
   </header>
 
-  <section class="tool-card" style="margin-top: 20px;">
-    <p>Retrouvez ici les dernières éditions de la newsletter interne et les brèves du réseau réservées aux membres.</p>
-
-    <div class="news-timeline">
-      <article class="news-item-private">
-        <div class="news-date">
-          <span class="day">01</span>
-          <span class="month">Mar</span>
-        </div>
-        <div class="news-body">
-          <span class="status-badge open">Nouveau</span>
+  <div class="dashboard-grid">
+    <section class="tool-card">
+      <h3>📂 Dernières Éditions</h3>
+      <div class="news-timeline" style="margin-top: 20px;">
+        <article class="news-item-private">
+          <div class="news-meta">Nouveau - Mars 2026</div>
           <h3>Édition #43 - Spécial Groupes de Travail</h3>
-          <p>Téléchargez la version complète incluant les comptes-rendus des derniers ateliers et les opportunités de financement.</p>
-          <a href="../pdf/repsybreve_43_full.pdf" class="btn-small-gold" style="display:inline-block; text-decoration:none; margin-top:10px;">Télécharger le PDF</a>
-        </div>
-      </article>
+          <p>Découvrez les comptes-rendus des derniers ateliers et les nouvelles opportunités de financement pour les labos partenaires.</p>
+          <a href="../pdf/repsybreve_43.pdf" class="btn-small-gold" target="_blank">Ouvrir le PDF</a>
+        </article>
 
-      <article class="news-item-private">
-        <div class="news-date">
-          <span class="day">01</span>
-          <span class="month">Fév</span>
-        </div>
-        <div class="news-body">
-          <h3>Édition #42 - Bilan AG 2026</h3>
-          <p>Accédez aux détails des votes et aux orientations stratégiques validées pour l'année à venir.</p>
-          <a href="../pdf/repsybreve_42_full.pdf" class="btn-text">Consulter l'archive</a>
-        </div>
-      </article>
-    </div>
-  </section>
+        <article class="news-item-private">
+          <div class="news-meta">Février 2026</div>
+          <h3>Édition #42 - Bilan de l'AG</h3>
+          <p>Synthèse des votes de l'Assemblée Générale et calendrier prévisionnel des actions de l'année.</p>
+          <a href="../pdf/repsybreve_42.pdf" class="btn-text">Consulter l'archive</a>
+        </article>
+      </div>
+    </section>
 
-  <section class="tool-card" style="margin-top: 30px;">
-    <h3>Paramètres de réception</h3>
-    <p>Vous recevez actuellement la REPSYBRÈVE sur l'adresse : <strong>membre@univ.fr</strong></p>
-    <label class="switch-container">
-      <input type="checkbox" checked>
-      <span class="slider">Recevoir la version mensuelle par email</span>
-    </label>
-  </section>
+    <aside class="tool-sidebar">
+      <section class="tool-card" style="margin-bottom: 20px;">
+        <h3>📩 S'abonner à la Newsletter</h3>
+        <p class="small-info">
+          L'abonnement est <strong>gratuit</strong> pour les membres. Recevez chaque mois l'essentiel de l'actualité du réseau.
+        </p>
+
+        <form class="profile-form" style="margin-top: 15px;">
+          <div class="status-box" style="margin-bottom: 15px;">
+            <input type="checkbox" id="sub-check">
+            <label for="sub-check" style="font-weight: bold;">Je m'abonne à la REPSYBRÈVE</label>
+          </div>
+
+          <p class="small-info" style="font-size: 0.75rem; color: #888; margin-bottom: 10px;">
+            En cochant cette case, vous acceptez de recevoir un email mensuel sur : <strong>membre@univ.fr</strong>
+          </p>
+
+          <button type="submit" class="btn-small-gold" style="width: 100%; border: none; cursor: pointer;">Enregistrer mon choix</button>
+        </form>
+      </section>
+
+      <section class="tool-card">
+        <h3>ℹ️ Information</h3>
+        <p class="small-info">La REPSYBRÈVE est publiée le premier lundi de chaque mois. Vous pouvez vous désabonner à tout moment depuis cette page.</p>
+      </section>
+    </aside>
+  </div>
 </main>
 
 <div id="footer-placeholder"></div>
