@@ -4,8 +4,9 @@ body { margin: 0; padding: 0; font-family: Arial, sans-serif; color: #222; }
 img { max-width: 100%; height: auto; vertical-align: middle; }
 
 :root {
-  --primary-blue: #0088cc;
-  --dark-blue: #003366;
+  --primary-blue: #7077ff;
+  --dark-blue: #4b3f72;
+  --light-purple: #e0e1ff;
   --max-width: 1100px;
 }
 
@@ -314,7 +315,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 /* Header de l'événement */
 .event-header {
-  background: linear-gradient(135deg, #003366 0%, #00509d 100%);
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
   color: white;
   padding: 50px 30px;
   border-radius: 12px;
