@@ -1,4 +1,3 @@
-/* RESET & BASE */
 * { box-sizing: border-box; }
 body { margin: 0; padding: 0; font-family: Arial, sans-serif; color: #222; }
 img { max-width: 100%; height: auto; vertical-align: middle; }
@@ -12,7 +11,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
 
-/* HEADER */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -23,36 +21,34 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .header-left { display: flex; align-items: center; gap: 30px; }
 
-/* LOGO CLIQUABLE */
 .logo-link { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px; }
 .logo-link:hover { opacity: 0.8; }
 .site-logo { height: 50px; }
 .site-title { font-weight: bold; font-size: 1.2em; }
 
-/* NAVIGATION & DROPDOWN */
 .main-navigation ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 20px; }
 .main-navigation a { text-decoration: none; color: #222; font-size: 0.95em; font-weight: 500; }
 .main-navigation a:hover { color: var(--primary-blue); }
 
-.dropdown { position: relative; } /* Pour aligner le sous-menu */
+.dropdown { position: relative; }
 
 .submenu {
-  display: none; /* Cache le menu physiquement */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: white;
   min-width: 200px;
   z-index: 1000;
-  opacity: 0; /* Rend le menu invisible */
-  pointer-events: none; /* Empêche de cliquer sur un menu invisible */
-  visibility: hidden; /* Cache pour les lecteurs d'écran quand fermé */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .dropdown:hover .submenu {
-  display: block; /* Réapparaît dans le flux */
-  opacity: 1; /* Devient opaque */
-  pointer-events: auto; /* Devient cliquable */
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
   visibility: visible;
 }
 
@@ -65,7 +61,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .submenu li a:hover { background: #f4f4f4; }
 
-/* BOUTON CONNEXION */
 .btn-connexion {
   background: var(--primary-blue);
   color: white !important;
@@ -76,7 +71,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   white-space: nowrap;
 }
 
-/* HERO BANNER */
 .hero-banner {
   background: var(--dark-blue) url('../img/exemple.png') center/cover no-repeat;
   height: 350px;
@@ -85,12 +79,10 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 .hero-overlay h1 { background: rgba(0,0,0,0.4); padding: 20px; font-size: 1.6em; }
 
-/* CONTENT GRID */
 .content-grid { display: flex; gap: 40px; margin: 40px auto; }
 .intro-text { flex: 2; }
 .intro-media { flex: 1; text-align: center; }
 
-/* FOOTER */
 .site-footer { background: var(--dark-blue); color: white; padding: 40px 0 20px; margin-top: 50px; }
 .footer-container { display: flex; justify-content: space-between; }
 .footer-column { flex: 1; }
@@ -98,7 +90,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .footer-column ul { list-style: none; padding: 0; }
 .footer-bottom { text-align: center; margin-top: 40px; opacity: 0.6; font-size: 0.8em; }
 
-/* Style pour la page Bureau */
 .bureau-section {
   padding: 40px 0;
 }
@@ -118,7 +109,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .member-card {
   background: #fff;
-  border-left: 5px solid #003366; /* Le bleu de ton header */
+  border-left: 5px solid #003366;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -136,7 +127,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .member-card .role {
   font-weight: bold;
-  color: #d4a017; /* Une couleur dorée/accent pour le rôle */
+  color: #d4a017;
   margin: 5px 0;
 }
 
@@ -145,13 +136,11 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #555;
 }
 
-/* Centrage du contenu pour la lecture */
 .single-column {
   max-width: 850px;
   margin: 40px auto;
 }
 
-/* Zone des liens en bas de page */
 .cta-area {
   margin-top: 50px;
   padding: 30px;
@@ -185,13 +174,12 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: white;
 }
 
-/* Style de la Timeline */
 .timeline {
   position: relative;
   max-width: 800px;
   margin: 50px auto;
   padding-left: 30px;
-  border-left: 4px solid #003366; /* Bleu de ton header */
+  border-left: 4px solid #003366;
 }
 
 .timeline-item {
@@ -199,7 +187,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 40px;
 }
 
-/* Le petit point sur la ligne */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -207,7 +194,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   top: 5px;
   width: 12px;
   height: 12px;
-  background-color: #d4a017; /* Doré pour l'accentuation */
+  background-color: #d4a017;
   border: 3px solid white;
   border-radius: 50%;
 }
@@ -231,7 +218,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #003366;
 }
 
-/* Style pour la page Statuts */
 .statuts-container {
   margin-top: 30px;
 }
@@ -253,7 +239,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding: 25px;
   border-radius: 8px;
   text-align: center;
-  border-left: 5px solid #d4a017; /* Rappel du doré */
+  border-left: 5px solid #d4a017;
 }
 
 .download-box p {
@@ -261,7 +247,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-weight: bold;
 }
 
-/* Layout spécifique pour la page carrefour Colloques */
 .colloque-cards-container {
   margin-top: 40px;
 }
@@ -313,7 +298,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   }
 }
 
-/* Header de l'événement */
 .event-header {
   background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
   color: white;
@@ -348,7 +332,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-weight: bold;
 }
 
-/* Tableau des dates */
 .dates-table {
   width: 100%;
   border-collapse: collapse;
@@ -360,7 +343,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   border-bottom: 1px solid #eee;
 }
 
-/* Cartes latérales */
 .sidebar-card {
   background: #f8f9fa;
   padding: 20px;
@@ -374,7 +356,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   background: #fff;
 }
 
-/* Style pour la page Modalités */
 .formats-container {
   margin: 40px 0;
 }
@@ -421,7 +402,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 5px;
 }
 
-/* Style pour la page Archives */
 .archive-item {
   display: flex;
   gap: 30px;
@@ -432,7 +412,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .archive-year {
   font-size: 2rem;
   font-weight: bold;
-  color: #d4a017; /* Doré pour l'année */
+  color: #d4a017;
   min-width: 100px;
 }
 
@@ -465,7 +445,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding: 8px 0;
 }
 
-/* Style pour la page Nos Actions */
 .action-block {
   margin-bottom: 50px;
   padding-bottom: 30px;
@@ -489,12 +468,12 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .action-header h2 {
   margin: 0;
-  color: #003366; /* Bleu institutionnel */
+  color: #003366;
   font-size: 1.6rem;
 }
 
 .action-content {
-  padding-left: 45px; /* Aligné sous le titre, pas sous l'icône */
+  padding-left: 45px;
 }
 
 .simple-list {
@@ -507,7 +486,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 8px;
 }
 
-/* Style pour la page Publications */
 .pub-section {
   margin-top: 40px;
 }
@@ -522,7 +500,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .pub-card {
   background: #ffffff;
   border: 1px solid #e1e8ed;
-  border-top: 4px solid #003366; /* Rappel du bleu institutionnel */
+  border-top: 4px solid #003366;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -548,7 +526,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .pub-item-large {
   background: #fdfdfd;
-  border-left: 5px solid #d4a017; /* Rappel du doré pour les ouvrages importants */
+  border-left: 5px solid #d4a017;
   padding: 25px;
   margin-top: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -560,7 +538,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-top: 10px;
 }
 
-/* Style pour la page Soutien Doctorants */
 .support-section {
   margin-bottom: 40px;
 }
@@ -576,11 +553,11 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .gold-border {
-  border-left: 6px solid #d4a017; /* Rappel du doré pour les prix */
+  border-left: 6px solid #d4a017;
 }
 
 .blue-border {
-  border-left: 6px solid #003366; /* Rappel du bleu pour les services */
+  border-left: 6px solid #003366;
 }
 
 .support-icon {
@@ -603,7 +580,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 0.95rem;
 }
 
-/* Style pour la page Groupes de Travail */
 .gt-container {
   margin-top: 30px;
 }
@@ -618,7 +594,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .gt-card:hover {
-  box-shadow: 0 4px 15px rgba(0,33,102,0.1); /* Ombre légère bleutée */
+  box-shadow: 0 4px 15px rgba(0,33,102,0.1);
 }
 
 .gt-header {
@@ -630,7 +606,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .gt-header h2 {
   margin: 0;
-  color: #003366; /* Bleu institutionnel */
+  color: #003366;
   font-size: 1.4rem;
 }
 
@@ -644,12 +620,12 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .gt-status.active {
   background-color: #e6fffa;
-  color: #2c7a7b; /* Vert pour ce qui est actif */
+  color: #2c7a7b;
 }
 
 .gt-status.archive {
   background-color: #f7fafc;
-  color: #4a5568; /* Gris pour ce qui est fini */
+  color: #4a5568;
 }
 
 .gt-meta {
@@ -660,11 +636,10 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding-top: 10px;
 }
 
-/* Style pour la page Réseau */
 .network-stats {
   display: flex;
   justify-content: space-around;
-  background: #003366; /* Bleu de ton header */
+  background: #003366;
   color: white;
   padding: 30px;
   border-radius: 12px;
@@ -680,7 +655,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #d4a017; /* Doré pour les chiffres */
+  color: #d4a017;
 }
 
 .stat-label {
@@ -694,7 +669,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 15px;
 }
 
-/* Style pour la page Annuaire */
 .labo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -708,7 +682,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.2s ease;
-  border-top: 3px solid #d4a017; /* Rappel du doré pour l'accentuation */
+  border-top: 3px solid #d4a017;
 }
 
 .labo-card:hover {
@@ -735,7 +709,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 15px;
 }
 
-/* Style pour la page Liens Utiles */
 .link-category {
   margin-bottom: 35px;
 }
@@ -775,7 +748,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding-left: 20px;
 }
 
-/* Style pour la page Actualités */
 .news-timeline {
   margin-top: 40px;
 }
@@ -812,7 +784,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #d4a017; /* Doré */
+  color: #d4a017;
   letter-spacing: 1px;
 }
 
@@ -826,7 +798,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 
 .news-link:hover { text-decoration: underline; }
 
-/* Pagination simple */
 .pagination { margin-top: 30px; text-align: center; }
 .pagination a {
   padding: 8px 15px;
@@ -838,7 +809,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 .pagination a.active { background: #003366; color: white; border-color: #003366; }
 
-/* Style pour les sous-pages d'actualités */
 .breadcrumb {
   font-size: 0.9rem;
   color: #666;
@@ -865,7 +835,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: #003366;
 }
 
-/* Style spécifique pour Appels à Projets */
 .news-header-meta {
   display: flex;
   justify-content: space-between;
@@ -893,8 +862,8 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .news-item-urgent {
-  background: #fffafa; /* Fond très légèrement rosé */
-  border-left: 4px solid #c53030; /* Rouge pour l'urgence */
+  background: #fffafa;
+  border-left: 4px solid #c53030;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -906,11 +875,10 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-top: 10px;
 }
 
-/* Style pour Vie du Réseau */
 .network-life {
   position: relative;
   padding-left: 30px;
-  border-left: 2px solid #f0f0f0; /* Petite ligne verticale de timeline */
+  border-left: 2px solid #f0f0f0;
   margin-top: 40px;
 }
 
@@ -926,7 +894,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   top: 5px;
   width: 12px;
   height: 12px;
-  background: #d4a017; /* Point doré sur la ligne */
+  background: #d4a017;
   border-radius: 50%;
   border: 3px solid white;
 }
@@ -945,7 +913,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 1.5rem;
 }
 
-/* Style pour la page Contact */
 .contact-form {
   background: #fdfdfd;
   padding: 30px;
@@ -983,7 +950,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .info-card h3 {
-  color: #d4a017; /* Doré */
+  color: #d4a017;
   margin-top: 0;
 }
 
@@ -1016,7 +983,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   .contact-roles-grid { grid-template-columns: 1fr; }
 }
 
-/* Style pour la page Adhérer */
 .benefits-list {
   margin: 30px 0;
   display: flex;
@@ -1051,14 +1017,14 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .price-card.highlight {
-  border: 2px solid #d4a017; /* Bordure dorée pour la catégorie principale */
+  border: 2px solid #d4a017;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .price {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #003366; /* Bleu institutionnel */
+  color: #003366;
   margin: 15px 0;
 }
 
@@ -1074,7 +1040,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   background: #f8f9fa;
   padding: 20px;
   margin-bottom: 15px;
-  border-left: 5px solid #d4a017; /* Doré */
+  border-left: 5px solid #d4a017;
 }
 
 .pricing-display {
@@ -1087,7 +1053,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   flex: 1;
   text-align: center;
   padding: 30px;
-  background: #003366; /* Bleu */
+  background: #003366;
   color: white;
   border-radius: 10px;
 }
@@ -1100,7 +1066,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .btn-connexion {
-  background-color: #d4a017; /* Ton doré */
+  background-color: #d4a017;
   color: white !important;
   padding: 10px 20px;
   border-radius: 5px;
@@ -1110,17 +1076,16 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .btn-connexion:hover {
-  background-color: #003366; /* Ton bleu au survol */
+  background-color: #003366;
   color: white !important;
 }
 
-/* --- ESPACE MEMBRE --- */
 .member-body {
-  background-color: #f4f7f9; /* Fond gris très clair pour détacher les cartes */
+  background-color: #f4f7f9;
 }
 
 .member-header-nav {
-  background: #002244; /* Bleu très foncé pour marquer la zone privée */
+  background: #002244;
   color: white;
   padding: 12px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -1129,7 +1094,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .member-header-nav .nav-flex {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centre verticalement le menu par rapport au logo */
+  align-items: center;
   padding: 10px 0;
 }
 
@@ -1180,10 +1145,9 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   color: white !important;
 }
 
-/* Grille du Dashboard */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Le centre de ressources prend plus de place */
+  grid-template-columns: 2fr 1fr;
   gap: 30px;
   margin-top: 30px;
 }
@@ -1204,7 +1168,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 15px;
 }
 
-/* Style du tableau de documents */
 .doc-table {
   width: 100%;
   border-collapse: collapse;
@@ -1238,14 +1201,12 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 0.8rem;
 }
 
-/* Limiter la taille du logo dans l'espace membre */
 .logo-area .mini-logo {
-  height: 80px; /* Ajuste cette valeur selon tes goûts */
-  width: auto;  /* Garde les proportions de l'image */
+  height: 80px;
+  width: auto;
   display: block;
 }
 
-/* Aligner le logo et le badge "Espace Connecté" */
 .logo-area {
   display: flex;
   flex-direction: column;
@@ -1258,7 +1219,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .close { position: absolute; right: 15px; top: 10px; cursor: pointer; font-size: 24px; }
 .upload-form { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
 
-/* Style pour la grille d'avantages */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1271,7 +1231,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  border-top: 4px solid #d4a017; /* Rappel doré */
+  border-top: 4px solid #d4a017;
 }
 
 .benefit-icon {
@@ -1305,7 +1265,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-left: 4px solid #d4a017; /* Rappel du badge membre */
+  border-left: 4px solid #d4a017;
 }
 
 .news-meta {
@@ -1375,7 +1335,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   margin-top: 20px;
 }
 
-/* Style spécifique pour la liste des parutions */
 .news-timeline {
   margin-top: 40px;
 }
@@ -1388,7 +1347,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   border-bottom: 1px solid #eee;
 }
 
-/* Le bloc date bleu institutionnel */
 .news-date {
   min-width: 80px;
   text-align: center;
@@ -1413,7 +1371,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #d4a017; /* Rappel doré pour le numéro d'édition */
+  color: #d4a017;
   letter-spacing: 1px;
 }
 
@@ -1431,7 +1389,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   text-decoration: underline;
 }
 
-/* Responsive pour mobile */
 @media (max-width: 600px) {
   .news-item {
     flex-direction: column;
@@ -1446,12 +1403,9 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   }
 }
 
-/* MOBILE RESPONSIVE */
+
 @media (max-width: 768px) {
   .header-container, .content-grid, .footer-container, .header-left { flex-direction: column; text-align: center; }
   .main-navigation ul { flex-direction: column; gap: 10px; }
   .submenu { position: static; box-shadow: none; border-left: 2px solid #eee; }
 }
-
-
-/*//test*/
